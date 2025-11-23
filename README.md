@@ -1,18 +1,43 @@
-# QuickShrink - Photo Compressor
+# QuickShrink - Photo Compressor ⚡
 
-A React Native mobile app for compressing photos on-device with different quality presets.
+A React Native mobile app for compressing photos on-device with professional-grade features designed for App Store success.
 
-## Features
+## 🌟 Stand-Out Features
 
-- **Select Photos**: Pick photos from your device gallery
-- **View Original Size**: See the original file size before compression
-- **Multiple Compression Levels**:
-  - High Quality (90% quality) - Minimal compression
-  - Balanced (70% quality) - Good quality, smaller size
-  - Small File (50% quality) - Maximum compression
-- **On-Device Processing**: All compression happens locally on your device
-- **View Results**: Compare original and compressed file sizes
-- **Save/Share**: Save the compressed photo or share it with other apps
+### ⚡ 1-Tap Auto Shrink
+Skip the menus—just tap "Auto Shrink" for instant compression with optimal settings.
+
+### 📊 Clear Before/After Comparison
+See exactly what you're getting:
+- Side-by-side image preview
+- Clear file size display
+- Percentage and bytes saved
+
+### 📱 Social Media Presets
+One-tap resize for popular platforms:
+- Instagram Square (1080x1080)
+- Instagram Story (1080x1920)
+- Facebook Post (1200x630)
+- TikTok Video (1080x1920)
+
+### 🎨 Four Compression Levels
+- **High Quality** (90%) - Minimal compression, best for printing
+- **Balanced** (70%) - Recommended for most uses
+- **Small File** (50%) - Maximum compression
+- **Super Small** (30%) - Ultra compression for messaging & sharing
+
+### 🔥 Premium Features (Pro Version)
+- **Batch Mode**: Compress multiple photos at once
+- **Ad-Free Experience**: No interruptions
+- **Priority Support**: Get help when you need it
+
+### 💡 What Makes Us Different
+- ✅ **No Watermarks Ever** - Your photos stay yours
+- ✅ **100% Offline** - No cloud upload, no account required
+- ✅ **Lightning Fast** - Compress photos in under 1 second
+- ✅ **Private & Secure** - All processing on your device
+- ✅ **Dark Mode** - Easy on the eyes
+- ✅ **Modern UI** - Clean, minimalist design
 
 ## Tech Stack
 
