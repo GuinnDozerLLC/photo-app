@@ -19,14 +19,26 @@ npm start
 
 ## 📱 Using the App
 
-### Step-by-Step
+### ⚡ Quick Mode (Recommended)
 1. **Select Photo**: Tap "Select Photo from Gallery"
-2. **Choose Quality**: Select one of three compression levels:
+2. **Auto Shrink**: Tap the big red "Auto Shrink (1-Tap)" button
+3. **Save/Share**: Done! Save or share your compressed photo
+
+### 🎯 Advanced Mode
+1. **Select Photo**: Tap "Select Photo from Gallery"
+2. **Social Preset** (Optional): Choose Instagram, TikTok, etc.
+3. **Choose Quality**: Select compression level:
    - 🟢 **High Quality** - Best quality (10-30% smaller)
    - 🟡 **Balanced** - Good balance (40-60% smaller)
-   - 🔴 **Small File** - Smallest size (60-80% smaller)
-3. **Compress**: Tap "Compress Photo" button
-4. **Save/Share**: Tap "Save / Share" to save or share your compressed photo
+   - 🔴 **Small File** - Maximum compression (60-80% smaller)
+   - ⚡ **Super Small** - Ultra compression (80-90% smaller)
+4. **Compress**: Tap "Compress Photo" button
+5. **Save/Share**: Save or share your compressed photo
+
+### 💎 Pro Features
+- **Batch Mode**: Enable in settings to compress multiple photos at once
+- **No Ads**: Upgrade to Pro to remove all advertisements
+- **Demo**: Premium features are enabled in demo mode for testing
 
 ## 💡 Tips
 
