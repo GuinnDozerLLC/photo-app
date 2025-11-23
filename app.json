@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "QuickShrink",
+    "slug": "quickshrink-photo-compressor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.quickshrink.photocompressor"
+    },
+    "android": {
+      "package": "com.quickshrink.photocompressor",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your photos to compress them."
+        }
+      ]
+    ]
+  }
+}
