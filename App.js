@@ -15,7 +15,9 @@ export default function App() {
   const [compressionLevel, setCompressionLevel] = useState('balanced');
   const [isCompressing, setIsCompressing] = useState(false);
   const [batchMode, setBatchMode] = useState(false);
-  const [isPremium, setIsPremium] = useState(false); // In real app, this would be from purchases
+  // TODO: Replace with expo-purchases or react-native-iap for production
+  // Example: const [isPremium, setIsPremium] = useState(await checkPurchaseStatus());
+  const [isPremium, setIsPremium] = useState(false);
   const [darkMode, setDarkMode] = useState(systemColorScheme === 'dark');
   const [socialPreset, setSocialPreset] = useState(null);
 
@@ -113,8 +115,21 @@ export default function App() {
   };
 
   // Handle upgrade to premium
-  const handleUpgrade = () => {
-    // In real app, this would trigger in-app purchase
+  const handleUpgrade = async () => {
+    // TODO: Implement with expo-purchases or react-native-iap
+    // Example implementation:
+    // try {
+    //   const purchase = await Purchases.purchasePackage(proPackage);
+    //   if (purchase.customerInfo.entitlements.active.pro) {
+    //     setIsPremium(true);
+    //   }
+    // } catch (error) {
+    //   if (!error.userCancelled) {
+    //     Alert.alert('Error', 'Purchase failed. Please try again.');
+    //   }
+    // }
+    
+    // Demo mode implementation
     Alert.alert('Demo Mode', 'In production, this would open the purchase flow. For demo, premium is now enabled!');
     setIsPremium(true);
   };
@@ -190,11 +205,29 @@ export default function App() {
       // Check if sharing is available
       const isAvailable = await Sharing.isAvailableAsync();
       if (isAvailable) {
-        // Share first image (in real app, could share all)
-        await Sharing.shareAsync(compressedImages[0], {
-          mimeType: 'image/jpeg',
-          dialogTitle: 'Save or Share Your Compressed Image'
-        });
+        // Note: expo-sharing only supports single file sharing
+        // For batch mode, share the first image
+        // TODO: For full batch support, consider using expo-media-library to save all images
+        // or implement a custom share sheet that handles multiple files
+        if (compressedImages.length > 1) {
+          Alert.alert(
+            'Batch Save',
+            `You have ${compressedImages.length} compressed images. Sharing the first one now. Additional images are ready in your app.`,
+            [
+              { text: 'OK', onPress: async () => {
+                await Sharing.shareAsync(compressedImages[0], {
+                  mimeType: 'image/jpeg',
+                  dialogTitle: 'Save or Share Your Compressed Image'
+                });
+              }}
+            ]
+          );
+        } else {
+          await Sharing.shareAsync(compressedImages[0], {
+            mimeType: 'image/jpeg',
+            dialogTitle: 'Save or Share Your Compressed Image'
+          });
+        }
       } else {
         Alert.alert('Success', 'Images have been compressed and are ready to use!');
       }
