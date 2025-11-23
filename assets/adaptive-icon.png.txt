@@ -1,2 +1,0 @@
-This is a placeholder for the Android adaptive icon (1024x1024 PNG).
-In a real deployment, replace this with an actual adaptive icon image.

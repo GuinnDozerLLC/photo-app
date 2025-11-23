@@ -1,2 +1,0 @@
-This is a placeholder for the web favicon (48x48 PNG).
-In a real deployment, replace this with an actual favicon image.

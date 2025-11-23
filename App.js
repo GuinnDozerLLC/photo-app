@@ -32,9 +32,17 @@ export default function App() {
 
   // Calculate savings percentage
   const calculateSavings = () => {
-    if (originalSize && compressedSize) {
+    if (originalSize && compressedSize && originalSize > 0) {
       const savings = ((originalSize - compressedSize) / originalSize * 100).toFixed(1);
       return savings;
+    }
+    return 0;
+  };
+  
+  // Calculate actual savings in bytes
+  const getSavingsBytes = () => {
+    if (originalSize && compressedSize && originalSize >= compressedSize) {
+      return originalSize - compressedSize;
     }
     return 0;
   };
@@ -214,7 +222,7 @@ export default function App() {
             <Text style={styles.fileSize}>File Size: {formatFileSize(compressedSize)}</Text>
             <View style={styles.savingsBox}>
               <Text style={styles.savingsText}>
-                Saved {calculateSavings()}% ({formatFileSize(originalSize - compressedSize)})
+                Saved {calculateSavings()}% ({formatFileSize(getSavingsBytes())})
               </Text>
             </View>
 

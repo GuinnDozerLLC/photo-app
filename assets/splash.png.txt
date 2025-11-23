@@ -1,2 +1,0 @@
-This is a placeholder for the splash screen (1242x2436 PNG).
-In a real deployment, replace this with an actual splash screen image.
